@@ -86,7 +86,7 @@
                         <a href="{{ route('rentService.show', $rentservice->order_id) }}"
                             class="btn btn-outline-primary">عرض</a>
                         @if ($rentservice->status == 'جديد')
-                            <button type="button" onclick="responseOffer({{ $rentservice->order_id }}, 'مقبول')"
+                            <button type="button"  onclick="responseOffer({{ $rentservice->order_id }}, 'مقبول')"
                                 class="btn btn-outline-success">قبول</button>
                             <button type="button" onclick="responseOffer({{ $rentservice->order_id }}, 'مرفوض')"
                                 class="btn btn-outline-danger">رفض</button>

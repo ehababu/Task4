@@ -54,6 +54,9 @@
               <li class="nav-item">
                 <a class="nav-link btn " href="{{route('booking.index')}}"> الحجوزات </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link btn " href="{{route('chart.index')}}"> الإحصائيات </a>
+              </li>
               
             </ul>
           </div>

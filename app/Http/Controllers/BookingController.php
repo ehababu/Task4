@@ -22,6 +22,10 @@ class BookingController extends Controller
         $bookings = Booking::all();
         return response()->view('bookings.index', compact('bookings'));
     }
+    public function indexChart()
+    {
+        return view('bookings.charts');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -58,48 +62,17 @@ class BookingController extends Controller
         ], $isSaved ? Response::HTTP_CREATED : Response::HTTP_BAD_REQUEST);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\Response
-     */
-    public function show(RentService $rentService, Booking $booking)
-    {
-        //
-    }
+ 
+    public function sumService(){
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(RentService $rentService, Booking $booking)
-    {
-        //
-    }
+        $bulliding = 0;
+        $count=0;
+        $halls=0; 
+        $water=0;
+        $genrator=0;
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, RentService $rentService,  Booking $booking)
-    {
-        //
-    }
+        
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(RentService $rentService, Booking $booking)
-    {
-        //
     }
+    
 }
